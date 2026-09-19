@@ -1,10 +1,11 @@
+import ReadBtn from '@/components/BooksDetails/ReadBtn';
 import { IBook } from '@/types/books.type';
 import Image from 'next/image';
 import React from 'react';
 
 const BookDetailsPage = async ({ params }: { params: { id: string } }) => {
     const { id } = await params;
-    const res = await fetch("http://localhost:3000/booksData.json");
+    const res = await fetch("http://localhost:3000/booksData.json", { next: { revalidate: 40 } });
     const books: IBook[] = await res.json();
     const data = books.find(book => String(book.bookId) == String(id));
     if (typeof data === "undefined") {
@@ -125,12 +126,9 @@ const BookDetailsPage = async ({ params }: { params: { id: string } }) => {
 
                     {/* Buttons */}
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <button className="btn btn-primary rounded-xl px-7">
-                            Add to Reading List
-                        </button>
-
+                        <ReadBtn book={book}></ReadBtn>
                         <button className="btn rounded-xl border-gray-300 bg-white px-7">
-                            ← Back to Books
+                            Wishlist
                         </button>
                     </div>
                 </div>
