@@ -20,6 +20,13 @@ const Navbar = () => {
                 >
                     Books
                 </Link>
+            </li> <li>
+                <Link
+                    href="/listed-books"
+                    className="font-medium transition-colors hover:text-primary"
+                >
+                    Listed Books
+                </Link>
             </li>
         </>
     );
