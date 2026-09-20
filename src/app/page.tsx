@@ -3,7 +3,7 @@ import HeroBanner from "@/components/HeroBanner";
 import { IBook } from "@/types/books.type";
 
 const Home = async () => {
-  const res = await fetch("http://localhost:3000/booksData.json");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
   const books: IBook[] = await res.json();
   return (
     <>
