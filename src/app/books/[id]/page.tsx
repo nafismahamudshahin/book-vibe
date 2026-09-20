@@ -6,7 +6,7 @@ import React from 'react';
 
 const BookDetailsPage = async ({ params }: { params: { id: string } }) => {
     const { id } = await params;
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`, { next: { revalidate: 40 } });
+    const res = await fetch(`https://mocki.io/v1/7c215432-41d2-4216-a578-eb06eb52565a`, { next: { revalidate: 40 } });
     const books: IBook[] = await res.json();
     const data = books.find(book => String(book.bookId) == String(id));
     if (typeof data === "undefined") {

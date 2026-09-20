@@ -3,7 +3,7 @@ import HeroBanner from "@/components/HeroBanner";
 import { IBook } from "@/types/books.type";
 
 const Home = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
+  const res = await fetch(`https://mocki.io/v1/7c215432-41d2-4216-a578-eb06eb52565a`);
   const books: IBook[] = await res.json();
   return (
     <>
