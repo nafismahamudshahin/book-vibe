@@ -15,10 +15,10 @@ const Login = () => {
             <div className="relative w-full max-w-md">
 
                 {/* Decorative Circle */}
-                <div className="pointer-events-none absolute -left-10 -top-10 hidden h-24 w-24 rounded-full border-[12px] border-[#4930d9]/5 sm:block" />
+                <div className="pointer-events-none absolute -left-10 -top-10 hidden h-24 w-24 rounded-full border-12 border-[#4930d9]/5 sm:block" />
 
                 {/* Decorative Circle */}
-                <div className="pointer-events-none absolute -bottom-8 -right-8 hidden h-20 w-20 rounded-full border-[10px] border-[#f5df69]/40 sm:block" />
+                <div className="pointer-events-none absolute -bottom-8 -right-8 hidden h-20 w-20 rounded-full border-10 border-[#f5df69]/40 sm:block" />
 
                 {/* Login Card */}
                 <div className="relative rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
@@ -159,7 +159,7 @@ const Login = () => {
 
                     {/* Register */}
                     <p className="mt-6 text-center text-xs text-gray-500">
-                        Don't have an account?{" "}
+                        Don{`'`}t have an account?{" "}
                         <Link
                             href="/sign-up"
                             className="font-semibold text-[#4930d9] hover:underline"

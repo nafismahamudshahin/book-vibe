@@ -1,44 +1,8 @@
 import Link from "next/link";
 import React from "react";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
-    const links = (
-        <>
-            <li>
-                <Link
-                    href="/"
-                    className="font-medium transition-colors hover:text-primary"
-                >
-                    Home
-                </Link>
-            </li>
-
-            <li>
-                <Link
-                    href="/books"
-                    className="font-medium transition-colors hover:text-primary"
-                >
-                    Books
-                </Link>
-            </li>
-            <li>
-                <Link
-                    href="/listed-books"
-                    className="font-medium transition-colors hover:text-primary"
-                >
-                    Listed Books
-                </Link>
-            </li>
-            <li>
-                <Link
-                    href="/read-books"
-                    className="font-medium transition-colors hover:text-primary"
-                >
-                    Read Books
-                </Link>
-            </li>
-        </>
-    );
 
     return (
         <nav className="sticky top-0 z-50 border-b border-base-200 bg-base-100/95 shadow-sm backdrop-blur">
@@ -74,7 +38,7 @@ const Navbar = () => {
                             tabIndex={-1}
                             className="menu dropdown-content z-50 mt-3 w-52 rounded-2xl bg-base-100 p-3 shadow-xl"
                         >
-                            {links}
+                            <NavLinks></NavLinks>
                         </ul>
                     </div>
 
@@ -91,7 +55,7 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal gap-2 px-1">
-                        {links}
+                        <NavLinks></NavLinks>
                     </ul>
                 </div>
 

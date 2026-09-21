@@ -1,30 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent } from "react";
 
 const Signup = () => {
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        // Signup logic here
-    };
-
     return (
         <section className="flex min-h-[calc(100vh-64px)] items-center justify-center bg-[#f8f7f3] px-4 py-10">
             <div className="relative w-full max-w-md">
 
                 {/* Decorative Elements */}
-                <div className="pointer-events-none absolute -left-10 -top-10 hidden h-24 w-24 rounded-full border-[12px] border-[#4930d9]/5 sm:block" />
+                <div className="pointer-events-none absolute -left-10 -top-10 hidden h-24 w-24 rounded-full border-12 border-[#4930d9]/5 sm:block" />
 
-                <div className="pointer-events-none absolute -bottom-8 -right-8 hidden h-20 w-20 rounded-full border-[10px] border-[#f5df69]/40 sm:block" />
+                <div className="pointer-events-none absolute -bottom-8 -right-8 hidden h-20 w-20 rounded-full border-10 border-[#f5df69]/40 sm:block" />
 
                 {/* Signup Card */}
                 <div className="relative rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-
                     {/* Header */}
                     <div className="mb-6 text-center">
-
                         {/* Logo */}
                         <Link
                             href="/"
@@ -43,19 +34,11 @@ const Signup = () => {
 
                     </div>
 
-
                     {/* Signup Form */}
-                    <form
-                        onSubmit={handleSubmit}
-                        className="space-y-4"
-                    >
-
+                    <form className="space-y-4">
                         {/* Name */}
                         <div>
-                            <label
-                                htmlFor="name"
-                                className="mb-1.5 block text-xs font-semibold text-gray-700"
-                            >
+                            <label htmlFor="name" className="mb-1.5 block text-xs font-semibold text-gray-700">
                                 Full Name
                             </label>
 
@@ -69,13 +52,9 @@ const Signup = () => {
                             />
                         </div>
 
-
                         {/* Email */}
                         <div>
-                            <label
-                                htmlFor="email"
-                                className="mb-1.5 block text-xs font-semibold text-gray-700"
-                            >
+                            <label htmlFor="email" className="mb-1.5 block text-xs font-semibold text-gray-700">
                                 Email
                             </label>
 
@@ -89,16 +68,11 @@ const Signup = () => {
                             />
                         </div>
 
-
                         {/* Password */}
                         <div>
-                            <label
-                                htmlFor="password"
-                                className="mb-1.5 block text-xs font-semibold text-gray-700"
-                            >
+                            <label htmlFor="password" className="mb-1.5 block text-xs font-semibold text-gray-700">
                                 Password
                             </label>
-
                             <input
                                 id="password"
                                 name="password"
@@ -110,13 +84,9 @@ const Signup = () => {
                             />
                         </div>
 
-
                         {/* Confirm Password */}
                         <div>
-                            <label
-                                htmlFor="confirmPassword"
-                                className="mb-1.5 block text-xs font-semibold text-gray-700"
-                            >
+                            <label htmlFor="confirmPassword" className="mb-1.5 block text-xs font-semibold text-gray-700">
                                 Confirm Password
                             </label>
 
@@ -131,7 +101,6 @@ const Signup = () => {
                             />
                         </div>
 
-
                         {/* Terms */}
                         <div className="flex items-start gap-2 pt-1">
 
@@ -142,10 +111,7 @@ const Signup = () => {
                                 className="mt-0.5 h-3.5 w-3.5 rounded border-gray-300 accent-[#4930d9]"
                             />
 
-                            <label
-                                htmlFor="terms"
-                                className="text-[11px] leading-4 text-gray-500"
-                            >
+                            <label htmlFor="terms" className="text-[11px] leading-4 text-gray-500">
                                 I agree to the{" "}
                                 <Link
                                     href="/terms"
@@ -165,17 +131,11 @@ const Signup = () => {
 
                         </div>
 
-
                         {/* Signup Button */}
-                        <button
-                            type="submit"
-                            className="w-full rounded-md bg-[#4930d9] py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[#3d27c4] hover:shadow-md"
-                        >
+                        <button type="submit" className="w-full rounded-md bg-[#4930d9] py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[#3d27c4] hover:shadow-md">
                             Create Account
                         </button>
-
                     </form>
-
 
                     {/* Divider */}
                     <div className="my-5 flex items-center gap-3">
@@ -190,31 +150,21 @@ const Signup = () => {
 
                     </div>
 
-
                     {/* Google Signup */}
-                    <button
-                        type="button"
-                        className="flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white py-2.5 text-xs font-semibold text-gray-700 transition hover:bg-gray-50"
-                    >
+                    <button type="button" className="flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white py-2.5 text-xs font-semibold text-gray-700 transition hover:bg-gray-50">
                         <span className="text-sm font-bold">
                             G
                         </span>
-
                         Continue with Google
                     </button>
-
 
                     {/* Login Link */}
                     <p className="mt-5 text-center text-xs text-gray-500">
                         Already have an account?{" "}
-                        <Link
-                            href="/login"
-                            className="font-semibold text-[#4930d9] hover:underline"
-                        >
+                        <Link href="/login" className="font-semibold text-[#4930d9] hover:underline">
                             Login
                         </Link>
                     </p>
-
                 </div>
             </div>
         </section>
