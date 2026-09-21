@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroImage from "@/assets/hero_img.jpg";
+import Link from "next/link";
 
 const HeroBanner = () => {
     return (
@@ -31,11 +32,13 @@ const HeroBanner = () => {
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4">
-                            <button
-                                className="rounded-lg bg-gray-900 px-6 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-800 hover:shadow-xl"
-                            >
-                                View The List →
-                            </button>
+                            <Link href="/books">
+                                <button
+                                    className="rounded-lg bg-gray-900 px-6 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-800 hover:shadow-xl"
+                                >
+                                    View The List →
+                                </button>
+                            </Link>
 
                             <button
                                 className="rounded-lg border border-gray-300 bg-white px-6 py-3.5 font-semibold text-gray-700 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50"

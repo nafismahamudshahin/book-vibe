@@ -22,7 +22,7 @@ const ListedBooksPage = () => {
     return (
         <div>
             <h1 className='text-center text-3xl font-bold py-3'> books</h1>
-            <div>
+            <div className='text-center'>
                 {/* sort */}
                 <select onChange={(e) => setSelectSort(e.target.value)} defaultValue="Pick a language" className="select select-secondary">
                     <option disabled={true}>Pick a language</option>
