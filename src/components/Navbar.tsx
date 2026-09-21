@@ -98,14 +98,14 @@ const Navbar = () => {
                 {/* Right */}
                 <div className="navbar-end gap-2">
                     <Link
-                        href="/signin"
+                        href="/login"
                         className="btn btn-ghost hidden sm:inline-flex"
                     >
                         Sign In
                     </Link>
 
                     <Link
-                        href="/signup"
+                        href="/sign-up"
                         className="btn btn-primary rounded-lg px-5"
                     >
                         Sign Up
